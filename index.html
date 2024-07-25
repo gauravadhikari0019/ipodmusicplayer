@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="video-background">
+        <video autoplay muted loop id="bgVideo">
+            <source src="music/mp1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div class="player">
+        <h1>Music Player</h1>
+        <div class="current-song">
+            <span id="currentSongTitle">Song Title</span>
+        </div>
+        <div class="controls">
+            <button id="prev">⏮️</button>
+            <button id="playPause">▶️</button>
+            <button id="next">⏭️</button>
+        </div>
+        <div class="volume-control">
+            <label for="volume">Volume:</label>
+            <input type="range" id="volume" min="0" max="1" step="0.1" value="0.5">
+        </div>
+        <canvas id="visualizer"></canvas>
+    </div>
+
+    <audio id="audioPlayer"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
